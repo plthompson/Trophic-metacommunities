@@ -37,7 +37,7 @@ for(disp in dispV){
     matplot(t(N[,1,]), type='l', lty=1,main=ratio)
     matplot(t(N[,2,]), type='l',lty=1,main=disp)
     
-    hold<-data.frame(Species=sum(rowSums(N[,,ts])>0),Biomass=sum(N[,,ts]),Pred_biomass=sum(N[3,,ts]),ratio=ratio,dispersal=disp)
+    hold<-data.frame(Species=sum(rowSums(N[,,ts])>0.1),Biomass=sum(N[,,ts]),Pred_biomass=sum(N[3,,ts]),ratio=ratio,dispersal=disp)
     if(disp == dispV[1] & ratio == ratioV[1]){
       results.df<-hold
     } else {
